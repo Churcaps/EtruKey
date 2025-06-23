@@ -1,0 +1,4 @@
+Pystray
+Pillow
+psutil
+pyinstaller
