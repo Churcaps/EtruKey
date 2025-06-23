@@ -24,7 +24,7 @@ A lightweight Windows application for typing using multiple Etruscan keyboards, 
 
 #### Does the app contain a virus or trojan?
 
-No, it doesn't. The app uses AutoHotkey (AHK) to detect key presses and replace them with the appropriate Etruscan characters. This method is safe and commonly used for keyboard scripting.
+No, it doesn't. The app uses AutoHotkey (AHK) to detect key presses and replace them with the appropriate Etruscan characters. This method is safe and commonly used for keyboard scripting. I am working on it to remove the false-positive to anti-virus 
 
 #### Can I modify the project to help improve it?
 
