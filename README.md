@@ -9,13 +9,14 @@ A lightweight Windows application for typing using multiple Etruscan keyboards, 
     - (Upcoming) Etruscan Epigr
 - Quick launch and rapid runs in the system tray
 - Simple and intuitive user interface
-
+- Custom Font (Etruscan Translitt) for Word, Websites, etc...
 
 ## Installation
 
 ```bash
 - Download the .exe file.
 - Run the executable, a window will briefly appear, later disappear.
+- Accept the admin request
 - Check the app icon (bottom right corner of your screen).
 - Right Click the tray icon to access and switch between keyboard layouts.
 ```
