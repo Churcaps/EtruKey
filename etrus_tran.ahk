@@ -1,4 +1,4 @@
-﻿#NoTrayIcon
+﻿;#NoTrayIcon
 
 k_pressed := false
 p_pressed := false
@@ -7,32 +7,34 @@ s_pressed := false
 plus_pressed := false
 h_pressed := false
 
-$k::
+SetKeyDelay(-1)
+
+~k::
 {
     global k_pressed
     k_pressed := true
-    SetTimer ResetK, -1000
+    SetTimer ResetK, -300
 }
 
-$p::
+~p::
 {
     global p_pressed
     p_pressed := true
-    SetTimer ResetP, -1000
+    SetTimer ResetP, -300
 }
 
-$t::
+~t::
 {
     global t_pressed
     t_pressed := true
-    SetTimer ResetT, -1000
+    SetTimer ResetT, -300
 }
 
-$s::
+~s::
 {
     global s_pressed
     s_pressed := true
-    SetTimer ResetS, -1000
+    SetTimer ResetS, -400
 }
 
 $+::
@@ -44,7 +46,7 @@ $+::
     {
         if plus_pressed
         {
-            GetKeyState("Capslock", "T") ? SendText("Ŝ") : SendText("ŝ")
+            GetKeyState("Capslock", "T") ? SendInput("{BS 1}Ŝ") : SendInput("{BS 1}ŝ")
             plus_pressed := false
             return
         }
@@ -54,7 +56,7 @@ $+::
     }
 }
 
-$h::
+~h::
 {
     global k_pressed
     global p_pressed
@@ -64,24 +66,24 @@ $h::
 
     if k_pressed
     {
-        SendText("χ")
+        GetKeyState("Capslock", "T") ? SendInput("{BS 2}Χ") : SendInput("{BS 2}χ")
         k_pressed := false
     }
     else if p_pressed
     {
-        SendText("ϕ")
+        GetKeyState("Capslock", "T") ? SendInput("{BS 2}Φ") : SendInput("{BS 2}ϕ")
         p_pressed := false
     }
     else if t_pressed
     {
-        SendText("θ")
+        GetKeyState("Capslock", "T") ? SendInput("{BS 2}Θ") : SendInput("{BS 2}θ")
         t_pressed := false
     }
     else if s_pressed
     {
         if h_pressed
         {
-            SendText("Ꮥ")
+            GetKeyState("Capslock", "T") ? SendInput("{BS 3}Ꮥ") : SendInput("{BS 3}ꮥ")
             h_pressed := false
             return
         }
@@ -121,7 +123,7 @@ ResetPlus()
 
     if plus_pressed
     {
-        GetKeyState("Capslock", "T") ? SendText("Ṡ") : SendText("ṡ")
+        GetKeyState("Capslock", "T") ? SendInput("{BS 1}Ṡ") : SendInput("{BS 1}ṡ")
         plus_pressed := false
     }
 }
@@ -133,7 +135,7 @@ ResetH()
 
     if h_pressed
     {
-        SendText("Ꭶ")
+        GetKeyState("Capslock", "T") ? SendInput("{BS 2}Ꭶ") : SendInput("{BS 2}ꭶ")
         h_pressed := false
     }
 
